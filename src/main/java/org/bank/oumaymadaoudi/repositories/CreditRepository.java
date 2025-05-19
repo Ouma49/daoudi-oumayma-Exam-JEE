@@ -14,28 +14,10 @@ import java.util.List;
 @Repository
 public interface CreditRepository extends JpaRepository<Credit, String> {
     
-    /**
-     * Find credits by customer.
-     *
-     * @param customer the customer
-     * @return list of credits for the given customer
-     */
+
     List<Credit> findByCustomer(Customer customer);
-    
-    /**
-     * Find credits by status.
-     *
-     * @param status the credit status
-     * @return list of credits with the given status
-     */
+
     List<Credit> findByStatus(CreditStatus status);
-    
-    /**
-     * Find credits by customer and status.
-     *
-     * @param customer the customer
-     * @param status the credit status
-     * @return list of credits for the given customer with the given status
-     */
+
     List<Credit> findByCustomerAndStatus(Customer customer, CreditStatus status);
 }
